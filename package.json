@@ -1,7 +1,11 @@
 {
   "name": "aghq-a",
-  "type": "module",
   "version": "0.0.1",
+  "dependencies": {
+    "astro": "^4.16.18",
+    "@astrojs/check": "^0.5.10",
+    "typescript": "^5.7.2"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -9,9 +13,5 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
-    "astro": "^4.16.18",
-    "@astrojs/check": "^0.5.10",
-    "typescript": "^5.7.2"
-  }
+  "type": "module"
 }
