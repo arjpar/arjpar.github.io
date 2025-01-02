@@ -1,0 +1,24 @@
+<button id="theme-toggle"> </button>
+
+<script>
+  // container div & theme toggle button
+  const container = document.querySelector("div.container");
+  const toggler = document.querySelector("button#theme-toggle");
+
+  // changes theme to isDark (true -- dark, false -- light)
+  const setTheme = (isDark: boolean) => {
+    // if dark mode is enabled, add the dark-mode class to container
+    container!.classList.toggle("dark-mode", isDark);
+    // if dark mode is enabled, show light mode in button text,
+    // otherwise (light mode is enabled) show dark mode
+    toggler!.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+  };
+  // determines whether the system/os is set to light mode or dark mode
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  // sets the theme depending on the system theme/colorscheme preference
+  setTheme(prefersDark);
+  // switches to other theme on theme toggle button click
+  toggler!.addEventListener("click", () =>
+    setTheme(!container!.classList.contains("dark-mode"))
+  );
+</script>

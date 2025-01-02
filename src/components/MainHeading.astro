@@ -1,0 +1,16 @@
+---
+import Part from "../layouts/Part.astro";
+
+const { name, title } = Astro.props;
+---
+
+<Part>
+  <h1 class="name">{name}</h1>
+  <p>{title}</p>
+</Part>
+
+<style>
+  h1.name {
+    font-variant: small-caps;
+  }
+</style>

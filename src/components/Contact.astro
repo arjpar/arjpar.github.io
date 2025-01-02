@@ -1,0 +1,27 @@
+---
+import Part from "../layouts/Part.astro";
+
+const { sectionName, gmail, readcv, github, linkedin } = Astro.props;
+---
+
+<Part>
+  <h2>{sectionName}</h2>
+  <a class="contact-info" href={"mailto:" + gmail + "@gmail.com"}>Email</a>
+  <a class="contact-info" href={"https://read.cv/" + readcv}>Résumé/CV</a>
+  <a class="contact-info" href={"https://github.com/" + github}>GitHub</a>
+  <a class="contact-info" href={"https://linkedin.com/in/" + linkedin}
+    >LinkedIn</a
+  >
+</Part>
+
+<style>
+  a.contact-info {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  /* a.contact-info:hover {
+    font-style: italic;
+  } */
+</style>
